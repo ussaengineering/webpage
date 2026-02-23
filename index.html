@@ -8,75 +8,174 @@
 
   <style>
     body {
-      margin: 40px auto;
-      max-width: 700px;
-      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #111;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #222;
     }
 
-    h1, h2 {
-      font-weight: 600;
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
     }
 
-    a {
-      color: black;
-      text-decoration: none;
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
     }
 
-    a:hover {
-      text-decoration: underline;
+    header h1 {
+      margin: 0;
     }
 
     section {
       margin: 60px 0;
     }
 
-    input {
-      padding: 8px;
-      font-size: 14px;
-      width: 200px;
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .newsletter {
+      background: white;
+      padding: 40px;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      width: 60%;
+      max-width: 300px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
     }
 
     button {
-      padding: 8px 12px;
-      font-size: 14px;
-      border: 1px solid black;
-      background: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      background: black;
+      color: white;
       cursor: pointer;
     }
 
     footer {
       margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid #ddd;
       font-size: 14px;
-      color: #666;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
 
-<h1>Perspective</h1>
-<p>Thoughtful writing on wellness, travel, creativity and growth.</p>
+<header class="container">
+  <h1>Perspective</h1>
+</header>
 
-<section>
-  <h2>Featured Articles</h2>
+<main class="container">
 
-  <p><a href="#">Finding Balance in Modern Life</a></p>
-  <p><a href="#">Travel Beyond the Map</a></p>
-  <p><a href="#">Unlocking Creative Potential</a></p>
-</section>
+  <!-- Hero Section -->
+  <section>
+    <h2>Welcome to Perspective</h2>
+    <p>Thoughtful insights on wellness, travel, creativity and growth.</p>
+  </section>
 
-<section>
-  <h2>Newsletter</h2>
-  <p>Get new articles by email.</p>
-  <input type="email" placeholder="Your email">
-  <button>Subscribe</button>
-</section>
+  <!-- Featured Articles -->
+  <section id="articles">
+    <h2>Featured Articles</h2>
 
-<footer>
-  <p>© 2025 Perspective</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Finding Balance in Modern Life</h3>
+        <p>Explore strategies for maintaining wellness in a fast-paced world.</p>
+      </div>
+
+      <div class="card">
+        <h3>Travel Beyond the Map</h3>
+        <p>Discover hidden destinations and meaningful journeys.</p>
+      </div>
+
+      <div class="card">
+        <h3>Unlocking Creative Potential</h3>
+        <p>Simple habits that boost creativity and inspiration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Stay inspired.</h2>
+    <p>Subscribe to receive our latest articles and insights directly in your inbox.</p>
+    <input type="email" placeholder="Your email">
+    <button>Subscribe</button>
+  </section>
+
+</main>
+
+<footer class="container">
+  <div class="grid">
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">Wellness</a></li>
+        <li><a href="#">Travel</a></li>
+        <li><a href="#">Creativity</a></li>
+        <li><a href="#">Growth</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Authors</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:40px;">
+    © 2025 Perspective. All rights reserved.
+  </p>
 </footer>
 
 </body>
